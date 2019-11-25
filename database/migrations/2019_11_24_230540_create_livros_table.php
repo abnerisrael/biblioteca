@@ -15,7 +15,7 @@ class CreateLivrosTable extends Migration
     {
         Schema::create('livros', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->nullable(false);
+            $table->string('nome')->nullable(false);
             $table->integer('genero_id')->nullable(false);
             $table->integer('editora_id')->nullable(false);
             $table->timestamps();
