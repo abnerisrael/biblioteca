@@ -12,85 +12,85 @@ class GenerosTableSeeder extends Seeder
     public function run()
     {
         DB::table('generos')->insert([
-            'name' => 'Ação',
+            'nome' => 'Ação',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Aventura',
+            'nome' => 'Aventura',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Chanchada',
+            'nome' => 'Chanchada',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Catástrofe',
+            'nome' => 'Catástrofe',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Comédia',
+            'nome' => 'Comédia',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Comédia romântica',
+            'nome' => 'Comédia romântica',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Comédia dramática',
+            'nome' => 'Comédia dramática',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Comédia de ação',
+            'nome' => 'Comédia de ação',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Cristão',
+            'nome' => 'Cristão',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Dança',
+            'nome' => 'Dança',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Documentário',
+            'nome' => 'Documentário',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Docuficção',
+            'nome' => 'Docuficção',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Drama',
+            'nome' => 'Drama',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Didático',
+            'nome' => 'Didático',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Espionagem',
+            'nome' => 'Espionagem',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Escolar',
+            'nome' => 'Escolar',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Faroeste (ou western)',
+            'nome' => 'Faroeste (ou western)',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Fantasia',
+            'nome' => 'Fantasia',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Ficção científica',
+            'nome' => 'Ficção científica',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Guerra',
+            'nome' => 'Guerra',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Literatura',
+            'nome' => 'Literatura',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Musical',
+            'nome' => 'Musical',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Policial',
+            'nome' => 'Policial',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Romance',
+            'nome' => 'Romance',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Religioso',
+            'nome' => 'Religioso',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Suspense',
+            'nome' => 'Suspense',
         ]);
         DB::table('generos')->insert([
-            'name' => 'Terror',
+            'nome' => 'Terror',
         ]);
     }
 }

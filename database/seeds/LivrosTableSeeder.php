@@ -11,6 +11,10 @@ class LivrosTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('clientes')->insert([
+            'nome' => 'Um Livro Qualquer',
+            'genero_id' => 1,
+            'editora_id' => 1,
+        ]);
     }
 }

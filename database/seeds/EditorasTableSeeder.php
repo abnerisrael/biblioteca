@@ -12,13 +12,13 @@ class EditorasTableSeeder extends Seeder
     public function run()
     {
         DB::table('editoras')->insert([
-            'name' => 'Editora Fulano de Tal do Brasil',
+            'nome' => 'Editora Fulano de Tal do Brasil',
         ]);
         DB::table('editoras')->insert([
-            'name' => 'Editora PHP LTDA',
+            'nome' => 'Editora PHP LTDA',
         ]);
         DB::table('editoras')->insert([
-            'name' => 'Editora Developers',
+            'nome' => 'Editora Developers',
         ]);
     }
 }

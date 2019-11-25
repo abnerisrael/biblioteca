@@ -12,15 +12,15 @@ class StatusTableSeeder extends Seeder
     public function run()
     {
         DB::table('status')->insert([
-            'name' => 'locado',
+            'nome' => 'locado',
         ]);
 
         DB::table('status')->insert([
-            'name' => 'nao locado',
+            'nome' => 'nao locado',
         ]);
 
         DB::table('status')->insert([
-            'name' => 'removido',
+            'nome' => 'removido',
         ]);
     }
 }
