@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resources([
+    'livros'    => 'LivroController',
+    'clientes'  => 'ClienteController',
+    'Editoras'  => 'EditoraController',
+    'Generos'   => 'GeneroController',
+]);
