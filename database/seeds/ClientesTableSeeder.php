@@ -13,7 +13,7 @@ class ClientesTableSeeder extends Seeder
     {
         DB::table('clientes')->insert([
             'nome' => 'Abner Israel Andrade',
-            'cpf' => '00000000000',
+            'cpf' => '01122233344',
             'email' => 'emailficticio@exemplane.com',
         ]);
     }
