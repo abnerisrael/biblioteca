@@ -38,8 +38,16 @@
         <div class="row">
             <div class="col">
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
-                <button type="reset" class="btn btn-secondary">Limpar Campos</button>
+                <button type="button" id="btnGoBack" class="btn btn-outline-secondary">Voltar</button>
             </div>
         </div>
     </form>
 @stop
+
+@section('page_script')
+    <script>
+        $('#btnGoBack').on('click', function () {
+            history.back();
+        })
+    </script>
+@endsection
