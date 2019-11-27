@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Biblioteca</a>
+    <a class="navbar-brand" href="{{route('livros.index')}}">Biblioteca</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,8 +20,8 @@
                     Cliente
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Cadastrar</a>
-                    <a class="dropdown-item" href="#">Ver Todos</a>
+                    <a class="dropdown-item" href="{{route('clientes.create')}}">Cadastrar</a>
+                    <a class="dropdown-item" href="{{route('clientes.index')}}">Ver Todos</a>
                 </div>
             </li>
         </ul>
