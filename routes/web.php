@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return redirect()->route('livros.index');
+//});
 
 Route::resources([
     'livros'    => 'LivroController',
     'clientes'  => 'ClienteController',
-    'Editoras'  => 'EditoraController',
-    'Generos'   => 'GeneroController',
+    'editoras'  => 'EditoraController',
+    'generos'   => 'GeneroController',
 ]);
