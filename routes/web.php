@@ -11,9 +11,9 @@
 |
 */
 
-//Route::get('/', function () {
-//    return redirect()->route('livros.index');
-//});
+Route::get('/', function () {
+   return redirect()->route('livros.index');
+});
 
 Route::resources([
     'livros'    => 'LivroController',
