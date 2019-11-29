@@ -11,7 +11,7 @@
     <!-- Plugins -->
     <link rel="stylesheet" href="css/datatables.css">
 
-    <title>Biblioteca</title>
+    <title>Biblioteca - @yield('Title')</title>
 </head>
 <body>
 
@@ -50,6 +50,7 @@
 </nav>
 
 <div class="container">
+    @yield('content')
     <h1>Livros</h1>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Oloco, meu!</strong> Olha esse alerta animado, como é chique!

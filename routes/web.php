@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return redirect()->route('livros.index');
+//});
+
+Route::resources([
+    'livros'    => 'LivroController',
+    'clientes'  => 'ClienteController',
+    'editoras'  => 'EditoraController',
+    'generos'   => 'GeneroController',
+]);
+
+Route::get('livros/{livro}/rent', 'LivroController@rent')->name('livros.rent');
+Route::get('livros/{livro}/giveback', 'LivroController@giveback')->name('livros.giveback');
