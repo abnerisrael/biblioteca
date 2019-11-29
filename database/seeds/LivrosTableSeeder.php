@@ -15,6 +15,8 @@ class LivrosTableSeeder extends Seeder
             'nome' => 'Um Livro Qualquer',
             'genero_id' => 1,
             'editora_id' => 1,
+            'status_id' => 1,
+            'cliente_id' => 1,
         ]);
     }
 }

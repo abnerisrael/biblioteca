@@ -2,13 +2,6 @@
 @section('header_title', 'Livro')
 @section('page_title', 'Livro')
 @section('page')
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>Oloco, meu!</strong> Olha esse alerta animado, como é chique!
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Disponíveis</a>
@@ -29,21 +22,23 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($livros as $livro)
+                @foreach($livros_disponiveis as $livro)
                     <tr>
                         <td>{{$livro->id}}</td>
                         <td>{{$livro->nome}}</td>
-                        <td>{{$livro->genero_id}}</td>
-                        <td>{{$livro->editora_id}}</td>
+                        <td>{{\App\Genero::find($livro->genero_id)->nome}}</td>
+                        <td>{{\App\Editora::find($livro->editora_id)->nome}}</td>
                         <td>{{$livro->created_at}}</td>
                         <td>
                             <a role="button"
                                href="{{url('livros/'.$livro->id)}}"
                                class="btn btn-sm btn-outline-primary">Ver</a>
-                            <button type="button" class="btn btn-sm btn-outline-warning">Editar</button>
-                            <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Locar</button>
-                            <button type="button" class="btn btn-sm btn-outline-success">Devolver</button>
+                            <a role="button"
+                               href="{{url('livros/'.$livro->id.'/edit')}}"
+                               class="btn btn-sm btn-outline-warning">Editar</a>
+                            <a role="button"
+                               href="{{url('livros/'.$livro->id.'/rent')}}"
+                               class="btn btn-sm btn-outline-secondary">Locar</a>
                         </td>
                     </tr>
                 @endforeach
@@ -58,26 +53,30 @@
                     <th>Nome</th>
                     <th>Genero</th>
                     <th>Editora</th>
-                    <th>Data Cadastro</th>
+                    <th>Alugado para</th>
+                    <th>Data Aluguel</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($livros as $livro)
+                @foreach($livros_alugados as $livro)
                     <tr>
                         <td>{{$livro->id}}</td>
                         <td>{{$livro->nome}}</td>
-                        <td>{{$livro->genero_id}}</td>
-                        <td>{{$livro->editora_id}}</td>
-                        <td>{{$livro->created_at}}</td>
+                        <td>{{\App\Genero::find($livro->genero_id)->nome}}</td>
+                        <td>{{\App\Editora::find($livro->editora_id)->nome}}</td>
+                        <td>{{\App\Cliente::find($livro->cliente_id)->nome}}</td>
+                        <td>{{$livro->updated_at}}</td>
                         <td>
                             <a role="button"
                                href="{{url('livros/'.$livro->id)}}"
                                class="btn btn-sm btn-outline-primary">Ver</a>
-                            <button type="button" class="btn btn-sm btn-outline-warning">Editar</button>
-                            <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Locar</button>
-                            <button type="button" class="btn btn-sm btn-outline-success">Devolver</button>
+                            <a role="button"
+                               href="{{url('livros/'.$livro->id.'/edit')}}"
+                               class="btn btn-sm btn-outline-warning">Editar</a>
+                            <a role="button"
+                               href="{{url('livros/'.$livro->id.'/giveback')}}"
+                               class="btn btn-sm btn-outline-success">Devolver</a>
                         </td>
                     </tr>
                 @endforeach

@@ -10,6 +10,7 @@
 
     <!-- Plugins -->
     <link rel="stylesheet" href="{{asset('css/datatables.css')}}">
+    <script src="https://kit.fontawesome.com/10b6aecd21.js" crossorigin="anonymous"></script>
 
     <title>Biblioteca - @yield('header_title')</title>
 </head>

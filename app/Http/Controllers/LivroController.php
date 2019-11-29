@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cliente;
 use App\Editora;
 use App\Genero;
 use App\Livro;
@@ -16,8 +17,11 @@ class LivroController extends Controller
      */
     public function index()
     {
-        $livros = Livro::all();
-        return view('pages.livro.index')->with('livros', $livros);
+        $livros_disponiveis = Livro::all()->where('status_id', '=', 1);
+        $livros_alugados = Livro::all()->where('status_id', '=', 2);
+        return view('pages.livro.index')
+                ->with('livros_disponiveis', $livros_disponiveis)
+                ->with('livros_alugados', $livros_alugados);
     }
 
     /**
@@ -82,10 +86,19 @@ class LivroController extends Controller
      */
     public function update(Request $request, Livro $livro)
     {
+        // Executado quando for uma locacao
+        if(!empty($request->cliente_id)) {
+            $livro->cliente_id = $request->cliente_id;
+            $livro->status_id = 2; //1 disponivel //2 alugado
+            $livro->save();
+            return redirect()->route('livros.index');
+        }
+
         $livro->nome = $request->nome;
         $livro->genero_id = $request->genero_id;
         $livro->editora_id = $request->editora_id;
-        return self::show($livro);
+        $livro->save();
+        return redirect()->route('livros.show', ['livros'=>$livro]);
     }
 
     /**
@@ -98,5 +111,15 @@ class LivroController extends Controller
     {
         $livro->delete();
         return self::index();
+    }
+
+    public function rent(Livro $livro){
+        return view('pages.livro.rent')->with('livro', $livro);
+    }
+
+    public function giveback(Livro $livro){
+        $livro->status_id = 1;
+        $livro->save();
+        return redirect()->route('livros.index');
     }
 }

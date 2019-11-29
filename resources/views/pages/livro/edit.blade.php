@@ -37,7 +37,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
                 <button type="button" id="btnGoBack" class="btn btn-outline-secondary">Voltar</button>
             </div>
         </div>

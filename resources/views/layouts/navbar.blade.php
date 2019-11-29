@@ -26,8 +26,14 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+            <a role="button"
+               href="https://github.com/abnerisrael/biblioteca/tree/develop"
+               class="btn"
+               data-toggle="tooltip"
+               data-placement="left"
+               title="Veja o Codigo no Github">
+                <i class="fab fa-github fa-lg"></i>
+            </a>
         </form>
     </div>
 </nav>
